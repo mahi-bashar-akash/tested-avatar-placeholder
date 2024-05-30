@@ -29,6 +29,9 @@
       <a href="#getting-started" class="sidebar-link" @click="sidebarToggle()">
         Getting started
       </a>
+      <a href="#avatar-photo" class="sidebar-link" @click="sidebarToggle()">
+        Avatar Photo
+      </a>
       <a href="#avatar-name" class="sidebar-link" @click="sidebarToggle()">
         Avatar Name
       </a>
@@ -76,6 +79,25 @@
           {{preCode}}
         </pre>
         </div>
+      </div>
+
+      <div id="avatar-photo">
+        <div class="content-title">Avatar Photo</div>
+
+        <pre class="py-1">
+        props: <br>
+        avatar: {<br>
+          type: String,<br>
+          default: null,<br>
+        }<br>
+      </pre>
+
+        <div class="bg-light pt-1 mt-2">
+        <pre>
+          {{preCodeAvatar}}
+        </pre>
+        </div>
+
       </div>
 
       <div id="avatar-name">
@@ -276,13 +298,7 @@ export default {
       preCode: `
         <template>
 
-            <!-- this code apply in your template code if use api implementation -->
-            <div v-for="each in listData" :key="each.id">
-                  <AvatarPlaceHolder :name="each.firstName+' '+each.secondName+' '+each.thirdName" :size="each.size" :background-color="each.backgroundColor" :text-color="each.textColor" :radius="each.borderRadius"/>
-            </div>
-
-            <!-- if single use-->
-            <AvatarPlaceHolder name="Olivia Mia Maeve" size="size-64" background-color="bg-blue" text-color="text-white" radius="rounded-none"/>
+            <AvatarPlaceHolder/>
 
         </template>
 
@@ -296,7 +312,8 @@ export default {
           }
 
       `,
-      preCodeAvatarName: `<AvatarPlaceHolder name="Olivia Mia Maeve">`,
+      preCodeAvatar: `<AvatarPlaceHolder avatar="avatar.png"/>`,
+      preCodeAvatarName: `<AvatarPlaceHolder name="Olivia Mia Maeve"/>`,
       preCodeAvatarSize: `<AvatarPlaceHolder size="size-64"/>`,
       preCodeAvatarBackgroundColor: `<AvatarPlaceHolder background-color="bg-blue"/>`,
       preCodeAvatarTextColor: `<AvatarPlaceHolder text-color="text-blue"/>`,
