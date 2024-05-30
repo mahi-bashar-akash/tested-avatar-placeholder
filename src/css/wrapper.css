@@ -1,0 +1,411 @@
+/* --- --- --- landing page content --- --- --- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro-wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.intro-wrapper-header .side-face {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.intro-wrapper-header .sidebar-toggle {
+    width: 35px;
+    height: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .intro-wrapper-header .sidebar-toggle {
+        display: flex;
+    }
+}
+
+.intro-wrapper-header .smile {
+    width: 50px;
+    height: 50px;
+}
+
+.intro-wrapper-header .github-link {
+    text-decoration: none;
+    color: rgba(128, 128, 128, 1);
+    padding: 10px 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .intro-wrapper-header .github-link {
+        padding: 5px;
+    }
+}
+
+.intro-wrapper {
+    display: flex;
+}
+
+.intro-wrapper .sidebar {
+    width: 300px;
+    height: calc(100vh - 70px);
+    padding: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .intro-wrapper .sidebar {
+        width: 100%;
+    }
+}
+
+.intro-wrapper .sidebar .sidebar-hidden-close {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.intro-wrapper .sidebar .sidebar-hidden-close .sidebar-close {
+    width: 35px;
+    height: 35px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 991px) {
+
+    .intro-wrapper .sidebar .sidebar-hidden-close .sidebar-close {
+        display: flex;
+    }
+
+    .intro-wrapper .sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -300px;
+        background-color: #ffffff;
+        transition: 0.3s all ease-in-out;
+        box-shadow: 0 0 12px 0 #eeeeee;
+    }
+
+    .intro-wrapper .sidebar.active {
+        transition: 0.3s all ease-in-out;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro-wrapper .sidebar {
+        width: 100%;
+        left: -110%;
+    }
+
+    .intro-wrapper .sidebar.active {
+        transition: 0.3s all ease-in-out;
+        left: 0;
+    }
+
+}
+
+.intro-wrapper .sidebar .sidebar-title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.intro-wrapper .sidebar .sidebar-link {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+.intro-wrapper .content {
+    width: calc(100% - 300px);
+    height: calc(100vh - 70px);
+    padding: 20px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 991px) {
+    .intro-wrapper .content {
+        width: 100%;
+    }
+}
+
+.intro-wrapper .content::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px !important;
+    height: 5px !important;
+}
+
+.intro-wrapper .content::-webkit-scrollbar-thumb {
+    background: var(--light-gray);
+    height: 5px !important;
+}
+
+.intro-wrapper .content .content-title {
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .intro-wrapper .content .content-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-wrapper .content .content-title {
+        font-size: 24px;
+    }
+}
+
+.intro-wrapper .content .content-paragraph {
+    font-size: 20px;
+    color: var(--gray);
+    margin: 15px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .intro-wrapper .content .content-paragraph {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-wrapper .content .content-paragraph {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro-wrapper .content .content-paragraph {
+        font-size: 14px;
+    }
+}
+
+.intro-wrapper .content .list-flex {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.intro-wrapper .content .list-flex .list-data {
+    width: 50%;
+}
+
+.intro-wrapper .content pre {
+    overflow-x: scroll;
+}
+
+.intro-wrapper .content pre::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px !important;
+    height: 5px !important;
+}
+
+.intro-wrapper .content pre::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.7);
+    height: 5px !important;
+}
+
+/* --- --- --- padding --- --- --- */
+
+.p-1 { padding: 10px; }
+
+.p-2 { padding: 20px; }
+
+.p-3 { padding: 30px; }
+
+.p-4 { padding: 40px; }
+
+.p-5 { padding: 50px; }
+
+/* --- --- --- padding left --- --- --- */
+
+.pe-1 { padding-left: 10px; }
+
+.pe-2 { padding-left: 20px; }
+
+.pe-3 { padding-left: 30px; }
+
+.pe-4 { padding-left: 40px; }
+
+.pe-5 { padding-left: 50px; }
+
+/* --- --- --- padding right --- --- --- */
+
+.ps-1 { padding-right: 10px; }
+
+.pb-2 { padding-right: 20px; }
+
+.pb-3 { padding-right: 30px; }
+
+.pb-4 { padding-right: 40px; }
+
+.pb-5 { padding-right: 50px; }
+
+/* --- --- --- padding top --- --- --- */
+
+.pt-1 { padding-top: 10px; }
+
+.pt-2 { padding-top: 20px; }
+
+.pt-3 { padding-top: 30px; }
+
+.pt-4 { padding-top: 40px; }
+
+.pt-5 { padding-top: 50px; }
+
+/* --- --- --- padding bottom --- --- --- */
+
+.pb-1 { padding-bottom: 10px; }
+
+.pb-2 { padding-bottom: 20px; }
+
+.pb-3 { padding-bottom: 30px; }
+
+.pb-4 { padding-bottom: 40px; }
+
+.pb-5 { padding-bottom: 50px; }
+
+/* --- --- --- padding left right --- --- --- */
+
+.px-1 { padding-left: 10px; padding-right: 10px }
+
+.px-2 { padding-left: 20px; padding-right: 20px }
+
+.px-3 { padding-left: 30px; padding-right: 30px }
+
+.px-4 { padding-left: 40px; padding-right: 40px }
+
+.px-5 { padding-left: 50px; padding-right: 50px }
+
+/* --- --- --- padding top bottom --- --- --- */
+
+.py-1 { padding-top: 10px; padding-bottom: 10px }
+
+.py-2 { padding-top: 20px; padding-bottom: 20px }
+
+.py-3 { padding-top: 30px; padding-bottom: 30px }
+
+.py-4 { padding-top: 40px; padding-bottom: 40px }
+
+.py-5 { padding-top: 50px; padding-bottom: 50px }
+
+/* --- --- --- margin --- --- --- */
+
+.m-1 { margin: 10px; }
+
+.m-2 { margin: 20px; }
+
+.m-3 { margin: 30px; }
+
+.m-4 { margin: 40px; }
+
+.m-5 { margin: 50px; }
+
+/* --- --- --- margin left --- --- --- */
+
+.me-1 { margin-left: 10px; }
+
+.me-2 { margin-left: 20px; }
+
+.me-3 { margin-left: 30px; }
+
+.me-4 { margin-left: 40px; }
+
+.me-5 { margin-left: 50px; }
+
+/* --- --- --- margin right --- --- --- */
+
+.ms-1 { margin-right: 10px; }
+
+.mb-2 { margin-right: 20px; }
+
+.mb-3 { margin-right: 30px; }
+
+.mb-4 { margin-right: 40px; }
+
+.mb-5 { margin-right: 50px; }
+
+/* --- --- --- margin top --- --- --- */
+
+.mt-1 { margin-top: 10px; }
+
+.mt-2 { margin-top: 20px; }
+
+.mt-3 { margin-top: 30px; }
+
+.mt-4 { margin-top: 40px; }
+
+.mt-5 { margin-top: 50px; }
+
+/* --- --- --- margin bottom --- --- --- */
+
+.mb-1 { margin-bottom: 10px; }
+
+.mb-2 { margin-bottom: 20px; }
+
+.mb-3 { margin-bottom: 30px; }
+
+.mb-4 { margin-bottom: 40px; }
+
+.mb-5 { margin-bottom: 50px; }
+
+/* --- --- --- margin left right --- --- --- */
+
+.mx-1 { margin-left: 10px; margin-right: 10px }
+
+.mx-2 { margin-left: 20px; margin-right: 20px }
+
+.mx-3 { margin-left: 30px; margin-right: 30px }
+
+.mx-4 { margin-left: 40px; margin-right: 40px }
+
+.mx-5 { margin-left: 50px; margin-right: 50px }
+
+/* --- --- --- margin top bottom --- --- --- */
+
+.my-1 { margin-top: 10px; margin-bottom: 10px }
+
+.my-2 { margin-top: 20px; margin-bottom: 20px }
+
+.my-3 { margin-top: 30px; margin-bottom: 30px }
+
+.my-4 { margin-top: 40px; margin-bottom: 40px }
+
+.my-5 { margin-top: 50px; margin-bottom: 50px }
