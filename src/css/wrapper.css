@@ -247,8 +247,20 @@ body {
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 576px) {
+    .intro-wrapper .content .list-flex {
+        display: block;
+    }
+}
+
 .intro-wrapper .content .list-flex .list-data {
     width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    .intro-wrapper .content .list-flex .list-data {
+        width: 100%;
+    }
 }
 
 .intro-wrapper .content pre {
