@@ -2,7 +2,7 @@
 
   <div class="intro-wrapper-header">
     <div class="side-face">
-      <img :src="`/svg/justify-left.svg`" class="sidebar-toggle" alt="justify-left" @click="sidebarToggle()">
+      <img :src="`/svg/justify-left.svg`" class="sidebar-toggle" alt="justify-left" @click="sidebarActive()">
       <img :src="`/svg/smie.svg`" class="smile" alt="smile">
     </div>
     <a href="https://github.com/mahibashardeveloper/avatar-placeholder" class="github-link">
@@ -12,39 +12,39 @@
   <div class="intro-wrapper">
     <div class="sidebar" :class="{'active' : sidebarIsActive}">
       <div class="sidebar-hidden-close">
-        <img :src="`/svg/close.svg`" class="sidebar-close" alt="close" @click="sidebarToggle()">
+        <img :src="`/svg/close.svg`" class="sidebar-close" alt="close" @click="sidebarRemove()">
       </div>
       <div class="sidebar-title">
         Overview
       </div>
-      <a href="#introduction" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#introduction" class="sidebar-link" @click="sidebarRemove()">
         Introduction
       </a>
-      <a href="#install" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#install" class="sidebar-link" @click="sidebarRemove()">
         Install
       </a>
       <div class="sidebar-title">
         Properties
       </div>
-      <a href="#getting-started" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#getting-started" class="sidebar-link" @click="sidebarRemove()">
         Getting started
       </a>
-      <a href="#avatar-photo" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#avatar-photo" class="sidebar-link" @click="sidebarRemove()">
         Avatar Photo
       </a>
-      <a href="#avatar-name" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#avatar-name" class="sidebar-link" @click="sidebarRemove()">
         Avatar Name
       </a>
-      <a href="#avatar-size" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#avatar-size" class="sidebar-link" @click="sidebarRemove()">
         Avatar Size
       </a>
-      <a href="#background-color" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#background-color" class="sidebar-link" @click="sidebarRemove()">
         Avatar Background Color
       </a>
-      <a href="#text-color" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#text-color" class="sidebar-link" @click="sidebarRemove()">
         Avatar Text Color
       </a>
-      <a href="#border-radius" class="sidebar-link" @click="sidebarToggle()">
+      <a href="#border-radius" class="sidebar-link" @click="sidebarRemove()">
         Avatar Border Radius
       </a>
     </div>
@@ -325,9 +325,13 @@ export default {
   },
   methods: {
 
-    sidebarToggle() {
-      this.sidebarIsActive = !this.sidebarIsActive
-    }
+    sidebarActive() {
+      this.sidebarIsActive = true;
+    },
+
+    sidebarRemove() {
+      this.sidebarIsActive = false;
+    },
 
   }
 }
